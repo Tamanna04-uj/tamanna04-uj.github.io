@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+
+    --primaryColor: #000;
+    --secondaryColor: #fff;
+    --themeFont: "Inter";
+
+    --spresume002_sectionBgColor:#fff;
+    --spresume002_sectionOverlayColor:rgba(0,0,0,.8);
+
+    --spresume002_headingColor:#000;
+    --spresume002_titleColor:#000;
+    --spresume002_contentColor:#7F7F7F;
+
+    --spresume002_borderColor:#F2F2F2;
+    --spresume002_progressbarFillColor:#000;
+    --spresume002_progressbarPercentageTextColor:#000;
+
+
+}
+
+.spresume002_universl * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--themeFont);
+}
+
+.spresume002_container {
+    max-width: 1360px;
+    width: 100%;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+}
+
+.spresume002_resume_section {
+    padding: 35px 0;
+    background-color: var(--spresume002_sectionBgColor);
+    position: relative;
+    z-index: 25;
+}
+
+.spresume002_section_bg{
+    background-image: url("../image/BG.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.spresume002_section_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color:var(--spresume002_sectionOverlayColor);
+    z-index: -1;
+    display: none;
+}
+.spresume002_section_bg .spresume002_section_overlay{
+    display: block;
+}
+/* section title */
+.spresume002_section_title_wrapper{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.spresume002_section_title{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--spresume002_headingColor);
+    position: relative;
+}
+/* section title position */
+.spresume002_section_title_left{
+    justify-content: flex-start;
+}
+.spresume002_section_title_center{
+    justify-content:center;
+}
+.spresume002_section_title_center .spresume002_section_title::before{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.spresume002_section_title_right{
+    justify-content: flex-end;
+}
+.spresume002_section_title_right .spresume002_section_title::before{
+    right: 0;
+    left: unset;
+}
+.spresume002_resume_content_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* title */
+.spresume002_title_text {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: var(--spresume002_titleColor);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.spresume002_section_title::before,
+.spresume002_title_text::before{
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width:30px;
+    height: 2px;
+    background-color: var(--primaryColor);
+    display: none;
+}
+
+
+/* resume */
+.spresume002_qualification_description,
+.spresume002_qualification_group,
+.spresume002_qualification_title{
+    font-size: 12px;
+    line-height:22px;
+    font-weight: 400;
+    color:var(--spresume002_contentColor);
+}
+
+.spresume002_qualification_title {
+    font-weight: 600;
+    color: var(--spresume002_titleColor);
+}
+.spresume002_qualification {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* progress */
+.spresume002_progress {
+    width: 100%;
+    position: relative;
+}
+
+
+/* col */
+
+.spresume002_skill_col {
+    width: 100%;
+}
+
+.spresume002_skill_col:nth-child(3),
+.spresume002_skill_col:nth-child(4) {
+    width: calc(50% - 10px);
+}
+
+.spresume002_title_text_wrapper {
+    margin-bottom: 30px;
+}
+
+/* skill */
+/* position */
+.spresume002_skill_left{
+    justify-content: flex-start;
+}
+.spresume002_skill_center{
+    justify-content: center;
+}
+.spresume002_skill_right{
+    justify-content: flex-end;
+}
+.spresume002_skill_between{
+    justify-content: space-between;
+}
+/* position */
+.spresume002_skills_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.spresume002_skill {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.spresume002_skill_text_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.spresume002_skill_text,
+.spresume002_percentage,
+.spresume002_skill_nav_text,
+.spresume002_date {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--spresume002_titleColor);
+}
+.spresume002_percentage{
+
+    color: var(--spresume002_progressbarPercentageTextColor);
+}
+
+
+.spresume002_progress_bar {
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0;
+    background-color: var(--spresume002_progressbarFillColor);
+}
+
+/* not needed */
+
+/* .spresume002_skill_col_one .spresume002_skill:nth-child(1) .spresume002_progress_bar {
+    width: 75%;
+}
+
+.spresume002_skill_col_one .spresume002_skill:nth-child(2) .spresume002_progress_bar {
+    width: 65%;
+}
+
+.spresume002_skill_col_one .spresume002_skill:nth-child(3) .spresume002_progress_bar {
+    width: 70%;
+}
+
+
+.spresume002_skill_col_two .spresume002_skill:nth-child(1) .spresume002_progress_bar {
+    width: 90%;
+}
+
+.spresume002_skill_col_two .spresume002_skill:nth-child(2) .spresume002_progress_bar {
+    width: 35%;
+}
+
+.spresume002_skill_col_two .spresume002_skill:nth-child(3) .spresume002_progress_bar {
+    width: 65%;
+} */
+
+/* not needed */
+
+
+
+
+.spresume002_skill_nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* =============== resume section ===============*/
+
+
+.spresume002_resume_area {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+
+.spresume002_col {
+    width: 100%;
+}
+
+.spresume002_resume_nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 15px;
+    position: relative;
+}
+
+.spresume002_resume_nav::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    width: 1px;
+    height: 100%;
+    background-color: var(--spresume002_borderColor);
+}
+.spresume002_resume_nav_item:not(:last-child):before{
+    background-color: var(--spresume002_borderColor);
+}
+.spresume002_resume_item_inner {
+    display: flex;
+    gap: 30px;
+}
+.spresume002_date_wrapper{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.spresume002_date {
+    padding: 4px 8px;
+    display: block;
+    height: 24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--spresume002_titleColor);
+}
+
+.spresume002_date::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+
+/* more skills */
+
+.spresume002_more_skills{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+/* skills area */
+.spresume002_skills_area {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+@media(min-width:768px) {
+    .spresume002_resume_section {
+        padding: 45px 0;
+    }
+
+
+    /* resume */
+
+    .spresume002_skills_area {
+        row-gap: 50px;
+        column-gap: 30px;
+    }
+
+    .spresume002_skill_col:nth-child(1),
+    .spresume002_skill_col:nth-child(2),
+    .spresume002_skill_col:nth-child(3),
+    .spresume002_skill_col:nth-child(4) {
+        width: calc(50% - 15px);
+    }
+
+    /* section title */
+    .spresume002_section_title_wrapper{
+        margin-bottom: 35px;
+    }
+    .spresume002_section_title{
+        font-size: 24px;
+    }
+
+    /* title */
+
+    .spresume002_title_text_wrapper {
+        margin-bottom: 35px;
+    }
+
+    .spresume002_title_text {
+        font-size: 18px;
+    }
+
+
+
+    /* skill */
+    .spresume002_skills_wrapper {
+        gap: 30px;
+    }
+
+    .spresume002_skill {
+        gap: 15px;
+    }
+
+    .spresume002_skill_text,
+    .spresume002_percentage,
+    .spresume002_skill_nav_text,
+    .spresume002_qualification_description {
+        font-size: 14px;
+    }
+
+
+    .spresume002_skill_nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    /* ================== resume =============== */
+
+
+    .spresume002_resume_area {
+        gap: 30px;
+        margin-top:50px;
+    }
+
+    .spresume002_resume_nav {
+        margin-left: 20px;
+        gap:35px;
+    }
+
+    .spresume002_resume_nav::before {
+        left: -20px;
+    }
+
+    .spresume002_resume_item_inner {
+        gap: 60px;
+    }
+
+    .spresume002_date {
+        font-size: 14px;
+    }
+
+    .spresume002_date::before {
+        left: -25px;
+        font-size: 14px;
+    }
+
+    .spresume002_qualification_title {
+        font-size: 14px;
+    }
+
+    .spresume002_qualification_group {
+        font-size: 14px;
+    }
+
+
+/* more skills */
+
+.spresume002_more_skills{
+    margin-top: 50px;
+    gap: 60px;
+}
+
+}
+
+
+@media(min-width:1025px) {
+    .spresume002_resume_section {
+        padding: 60px 0;
+    }
+
+
+        /* section title */
+        .spresume002_section_title_wrapper{
+            margin-bottom: 40px;
+        }
+        .spresume002_section_title{
+            font-size: 28px; 
+        }
+        /* title */
+
+        .spresume002_title_text_wrapper {
+            margin-bottom: 40px;
+        }
+        .spresume002_title_text {
+            font-size: 20px;
+        }
+    
+    
+        /* skills */
+        .spresume002_skills_area {
+            column-gap: 80px;
+            row-gap: 60px;
+        }
+    
+        .spresume002_skill_col:nth-child(1),
+        .spresume002_skill_col:nth-child(2),
+        .spresume002_skill_col:nth-child(3),
+        .spresume002_skill_col:nth-child(4) {
+            width: calc(50% - 40px);
+        }
+    
+    
+        /* ============= resume ============ */
+    
+        .spresume002_resume_area {
+            flex-direction: row;
+            gap: 80px;
+            margin-top: 60px;
+        }
+    
+        .spresume002_resume_nav{
+            gap: 40px;
+        }
+        .spresume002_resume_item_inner{
+            gap: 70px;
+        }
+    
+    
+        /* more skills */
+    
+        .spresume002_more_skills{
+            margin-top: 60px;
+        }
+}
